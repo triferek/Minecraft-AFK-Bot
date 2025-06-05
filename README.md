@@ -20,8 +20,8 @@ This is a lightweight Minecraft Java AFK Bot powered by [Mineflayer](https://git
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/icelaterdc/Minecraft-AFK-Bot-for-Aternos.git
-cd Minecraft-AFK-Bot-for-Aternos
+git clone https://github.com/icelaterdc/Minecraft-AFK-Bot.git
+cd Minecraft-AFK-Bot
 ```
 
 ### 2. Install dependencies
