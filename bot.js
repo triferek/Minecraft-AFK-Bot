@@ -18,7 +18,7 @@ const JUMP_DURATION = 500;
 bot.on('spawn', () => {
   setTimeout(() => {
     bot.setControlState('sneak', true);
-    console.log(`${config.botUsername} is Ready!`);
+    console.log(`✅ ${config.botUsername} is Ready!`);
   }, 3000);
 
   setTimeout(hareketDongusu, STEP_INTERVAL);
