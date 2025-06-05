@@ -1,0 +1,6 @@
+{
+  "serverHost": "example.com", // Your server host adress/IP
+  "serverPort": 12345, // Your server port
+  "botUsername": "IceLaterBot", // AFK bot name
+  "botChunk": 2 // AFK bot chunk
+}
