@@ -2,5 +2,5 @@
   "serverHost": "example.aternos.me",
   "serverPort": 12345,
   "botUsername": "IceLaterBot",
-  "botChunk": 2
+  "botChunk": 1
 }
