@@ -10,7 +10,7 @@ const bot = mineflayer.createBot({
   viewDistance: config.botChunk
 });
 
-let hareketAşaması = 0;
+let movementPhase = 0;
 const STEP_INTERVAL = 1500;
 const STEP_SPEED    = 1;
 const JUMP_DURATION = 500;
@@ -21,13 +21,13 @@ bot.on('spawn', () => {
     console.log(`✅ ${config.botUsername} is Ready!`);
   }, 3000);
 
-  setTimeout(hareketDongusu, STEP_INTERVAL);
+  setTimeout(movementCycle, STEP_INTERVAL);
 });
 
-function hareketDongusu() {
+function movementCycle() {
   if (!bot.entity) return;
 
-  switch (hareketAşaması) {
+  switch (movementPhase) {
     case 0:
       bot.setControlState('forward', true);
       bot.setControlState('back', false);
@@ -54,9 +54,9 @@ function hareketDongusu() {
       break;
   }
 
-  hareketAşaması = (hareketAşaması + 1) % 4;
+  movementPhase = (movementPhase + 1) % 4;
 
-  setTimeout(hareketDongusu, STEP_INTERVAL);
+  setTimeout(movementCycle, STEP_INTERVAL);
 }
 
 bot.on('error', (err) => {
