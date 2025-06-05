@@ -63,10 +63,10 @@ On successful connection:
 
 | Key            | Description                                |
 | -------------- | ------------------------------------------ |
-| `host`         | IP or domain of your Minecraft server      |
-| `port`         | Server port (default is 25565)             |
-| `username`     | The bot's visible name in-game             |
-| `viewDistance` | Radius of loaded chunks (recommended: 1–6) |
+| `serverHost`         | IP or domain of your Minecraft server      |
+| `serverPort`         | Server port (default is 25565)             |
+| `botUsername`     | The bot's visible name in-game             |
+| `botChunk` | Radius of loaded chunks (recommended: 1–6) |
 
 ---
 
