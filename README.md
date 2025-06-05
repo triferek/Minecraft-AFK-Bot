@@ -1,0 +1,96 @@
+# 🤖 Minecraft AFK Bot (Mineflayer-Based)
+
+This is a lightweight Minecraft Java AFK Bot powered by [Mineflayer](https://github.com/PrismarineJS/mineflayer). It connects to a Java server, performs basic movements to avoid AFK detection, and can be customized via a simple configuration file.
+
+---
+
+## ✨ Features
+
+* Connect to Minecraft Java servers (IP + port)
+* Customize bot username
+* Control chunk loading and memory usage
+* Periodic chunk pruning to reduce resource usage
+* Auto-movement behavior: step forward/backward, jump, sneak, loop
+* Easy configuration via `config.json`
+
+---
+
+## ⚡ Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/icelaterdc/Minecraft-AFK-Bot-for-Aternos.git
+cd Minecraft-AFK-Bot-for-Aternos
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure `config.json`
+
+```json
+{
+  "host": "yourserver.aternos.me",
+  "port": 25565,
+  "username": "MyBotName",
+  "viewDistance": 4
+}
+```
+
+> ⚠️ Make sure the server is in offline mode if you're not using premium accounts.
+
+---
+
+## 🤖 Starting the Bot
+
+```bash
+node bot.js
+```
+
+On successful connection:
+
+* You'll see `✅ BotName is Ready!` in the console
+* After 5 seconds, all loaded chunks are cleared
+* Every 20 seconds, any chunks beyond a 6-chunk radius will be removed
+
+---
+
+## ⚙️ Configuration Options (`config.json`)
+
+| Key            | Description                                |
+| -------------- | ------------------------------------------ |
+| `host`         | IP or domain of your Minecraft server      |
+| `port`         | Server port (default is 25565)             |
+| `username`     | The bot's visible name in-game             |
+| `viewDistance` | Radius of loaded chunks (recommended: 1–6) |
+
+---
+
+## ⚠️ Notes
+
+* **Skins**: Skins might not appear properly if the server is in offline mode.
+* **Sneak Movement**: The bot uses `setControlState('sneak', true)`, but some servers may block or ignore this action.
+* **AFK Prevention**: The bot periodically moves, sneaks, and jumps to prevent disconnection due to inactivity.
+
+---
+
+## 📚 Resources & Contributions
+
+* [Mineflayer Docs](https://mineflayer.prismarine.js.org/)
+* [PrismarineJS GitHub](https://github.com/PrismarineJS/)
+
+Feel free to contribute by opening a pull request or submitting an issue.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+Get started now and keep your server active with a smart, customizable bot! ⛏️
