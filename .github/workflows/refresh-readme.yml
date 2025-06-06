@@ -1,12 +1,9 @@
 name: Refresh README Timestamp
 
-# Hem cron ile her gece 00:00’te tetiklenecek, hem de manuel olarak “Run workflow” ile çalıştırılabilecek
 on:
   schedule:
-    - cron: '0 0 * * *'
   workflow_dispatch:
 
-# README üzerinde yazma (push) izni gerekiyor
 permissions:
   contents: write
 
@@ -15,26 +12,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) Repo’yu çekiyoruz. “main” yerine sizin ana branşınız varsa onu yazın.
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           ref: main
 
-      # 2) README.md içindeki invisible comment’ı güncelliyoruz (görünür bir değişiklik yaratmadan içeriği değiştiriyor)
       - name: Update README timestamp
         run: |
           TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
           if grep -q "<!-- Last updated:" README.md; then
-            # Mevcut yorum varsa, yeni UTC zaman damgasını koy
             sed -i "s/<!-- Last updated:.*-->/<!-- Last updated: $TIMESTAMP -->/" README.md
           else
-            # Yorum yoksa en başa ekle
             echo "<!-- Last updated: $TIMESTAMP -->" | cat - README.md > /tmp/README.tmp
             mv /tmp/README.tmp README.md
           fi
 
-      # 3) Değişiklik varsa commit’liyoruz; yoksa hata atmaz, “No changes to commit” mesajı basar
       - name: Commit updated README
         run: |
           git config user.name "github-actions[bot]"
@@ -42,6 +34,5 @@ jobs:
           git add README.md
           git commit -m "chore: update README timestamp" || echo "No changes to commit"
 
-      # 4) Değişiklikleri uzak sunucuya gönder (push)
       - name: Push changes
         run: git push origin main
