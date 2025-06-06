@@ -1,7 +1,6 @@
 name: Refresh README Timestamp
 
 on:
-  schedule:
   workflow_dispatch:
 
 permissions:
