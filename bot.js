@@ -50,7 +50,6 @@ function movementCycle() {
       bot.setControlState('forward', false);
       bot.setControlState('back', false);
       bot.setControlState('jump', false);
-      console.log('– Bekleme aşıaması (iniş tamamlandı)');
       break;
   }
 
