@@ -7,7 +7,9 @@ This is a lightweight Minecraft Java AFK Bot powered by [Mineflayer](https://git
 
 ## ⚠️ Warning Before You Begin
 
-Before starting the bot, please make sure that the Offline Mode (Pirated/Not Original) option in the settings section of your Aternos server is active.
+- Before starting the bot, please make sure that the Offline Mode (Pirated/Not Original) option in the settings section of your Aternos server is active.
+
+- Secure the bot to protect it from monsters.
 
 ---
 
