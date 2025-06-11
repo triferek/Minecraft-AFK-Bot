@@ -1,4 +1,4 @@
-<!-- Last updated: 2025-06-11T02:16:09Z -->
+<!-- Last updated: 2025-06-11T02:17:08Z -->
 # 🤖 Minecraft AFK Bot (Mineflayer-Based)
 
 This is a lightweight Minecraft Java AFK Bot powered by [Mineflayer](https://github.com/PrismarineJS/mineflayer). It connects to a Java server, performs basic movements to avoid AFK detection, and can be customized via a simple configuration file.
