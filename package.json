@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node bot.js"
   },
-  "author": "Senin İsmin",
+  "author": "IceLater",
   "license": "MIT",
   "dependencies": {
     "mineflayer": "^4.29.0"
