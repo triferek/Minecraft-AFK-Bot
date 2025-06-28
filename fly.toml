@@ -1,4 +1,4 @@
-app = "minecraft-afk-bot"
+app = "minecraft-afk-bot123123"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
