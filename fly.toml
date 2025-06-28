@@ -1,13 +1,17 @@
-app = "minecraft-afk-bot123123"
-
-kill_signal = "SIGINT"
-kill_timeout = 5
+aapp = "twoja-nazwa-aplikacji"
 
 [build]
-  dockerfile = "Dockerfile"
+  image = "node:18-bullseye"
 
 [env]
   PORT = "3000"
+
+[deploy]
+  release_command = "npm run build" # jeśli masz build script, jeśli nie, usuń tę linijkę
+
+[experimental]
+  allowed_public_ports = [3000]
+  auto_rollback = true
 
 [[services]]
   internal_port = 3000
@@ -15,6 +19,8 @@ kill_timeout = 5
 
   [[services.ports]]
     port = 80
+    handlers = ["http"]
 
   [[services.ports]]
     port = 443
+    handlers = ["tls", "http"]
