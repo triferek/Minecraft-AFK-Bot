@@ -1,6 +1,9 @@
 {
-  "serverHost": "n1.nesv.pl",
-  "serverPort": 25641,
-  "botUsername": "Afkbotdx123",
-  "botChunk": 1
+  "serverHost": "mc.twojserwer.pl",
+  "serverPort": 25565,
+  "botUsername": "BotAtrix",
+  "botPasswords": [
+    d
+  ],
+  "botChunk": "far"
 }
